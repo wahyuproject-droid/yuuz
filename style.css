@@ -114,3 +114,41 @@ body{background:var(--bg);color:var(--navy)}
 .partner-track{min-width:200%}.partner-group{flex:1 0 auto;min-width:50%;justify-content:space-around}.partner-viewport:hover .partner-track{animation-play-state:running}.partner-section.is-paused .partner-track,.partner-viewport:focus-within .partner-track{animation-play-state:paused}@media(hover:hover) and (pointer:fine){.partner-viewport:hover .partner-track{animation-play-state:paused}}
 
 .shopper-summary strong{overflow-wrap:anywhere}.loyalty-badge{max-width:100%;white-space:normal;overflow-wrap:anywhere}.partner-viewport{cursor:grab}.partner-viewport:active{cursor:grabbing}@media(prefers-reduced-motion:reduce){.partner-track{min-width:100%}.partner-group{min-width:100%}}
+
+/* Ukuran logo ADMIN */
+.sidebar > .brand {
+  width: 100%;
+  min-height: 94px;
+  padding: 0 0 14px;
+  justify-content: flex-start;
+}
+.sidebar > .brand img {
+  width: 180px;
+  height: 80px;
+  max-width: 100%;
+  max-height: none;
+  object-fit: contain;
+  object-position: left center;
+  border-radius: 0;
+  background: transparent;
+}
+.login-art > .brand img,
+.login-form .brand.mobile-only img {
+  width: 180px;
+  height: 80px;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+  border-radius: 0;
+}
+@media (max-width: 700px) {
+  .sidebar > .brand {
+    min-height: 72px;
+    padding: 0;
+    flex-basis: 100%;
+  }
+  .sidebar > .brand img {
+    width: 160px;
+    height: 64px;
+  }
+}
