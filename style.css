@@ -270,3 +270,7 @@ body{background:var(--bg);color:var(--navy)}
     height: 96px;
   }
 }
+/* Sembunyikan footer selama intro/loading */
+body:has(#app .initial) .yuuz-footer {
+  display: none;
+}
