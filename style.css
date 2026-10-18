@@ -256,3 +256,17 @@ body{background:var(--bg);color:var(--navy)}
     transition: none;
   }
 }
+.yuuz-footer-brand img {
+  width: 260px;
+  height: 110px;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+@media (max-width: 700px) {
+  .yuuz-footer-brand img {
+    width: 220px;
+    height: 96px;
+  }
+}
