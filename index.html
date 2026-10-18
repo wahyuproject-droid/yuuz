@@ -20,4 +20,19 @@
     <span>© 2026 YuuZ Market</span>
     <span>Semua harga dalam Rupiah</span>
   </div>
-</footer></body></html>
+</footer>
+<script>
+  document.addEventListener("keydown", function (e) {
+    const key = e.key.toLowerCase();
+
+    const blocked =
+      key === "f12" ||
+      (e.ctrlKey && e.shiftKey && ["i", "j", "c"].includes(key)) ||
+      (e.metaKey && e.altKey && ["i", "j", "c"].includes(key));
+
+    if (blocked) {
+      e.preventDefault();
+    }
+  }, true);
+</script>
+</body></html>
