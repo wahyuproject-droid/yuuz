@@ -165,3 +165,94 @@ body{background:var(--bg);color:var(--navy)}
 @media(max-width:700px){.home-page>.partner-section{padding:17px 14px;border-radius:17px}.home-page>.partner-section h2{font-size:18px}.home-page>.partner-section .partner-group{padding:10px 6px}.home-page>.partner-section .partner-logo{width:128px}.home-page>.partner-section .partner-logo img{width:96px;height:48px}}
 @media(prefers-reduced-motion:no-preference){.home-page>.partner-section{animation:home-reveal .32s ease .12s both}}
 @media(prefers-reduced-motion:reduce){.home-page>.partner-section{animation:none!important}}
+
+.yuuz-footer {
+  margin-top: 40px;
+  padding: 32px max(20px, calc((100% - 1216px) / 2)) 20px;
+  background: var(--surface, #fff);
+  color: var(--navy, #0f172a);
+  border-top: 1px solid var(--line, #e2e8f0);
+}
+
+.yuuz-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding-bottom: 25px;
+}
+
+.yuuz-footer-brand {
+  min-width: 0;
+}
+
+.yuuz-footer-brand img {
+  width: 180px;
+  height: 65px;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.yuuz-footer-brand p {
+  margin: 10px 0 0;
+  color: var(--muted, #64748b);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.yuuz-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.yuuz-footer-links a {
+  color: var(--muted, #64748b);
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.yuuz-footer-links a:hover {
+  color: var(--blue, #2563eb);
+}
+
+.yuuz-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line, #e2e8f0);
+  color: var(--muted, #64748b);
+  font-size: 10px;
+}
+
+@media (max-width: 700px) {
+  .yuuz-footer {
+    margin-top: 25px;
+    padding: 24px 18px calc(100px + env(safe-area-inset-bottom));
+  }
+
+  .yuuz-footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .yuuz-footer-brand img {
+    width: 150px;
+    height: 55px;
+  }
+
+  .yuuz-footer-links {
+    gap: 12px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yuuz-footer-links a {
+    transition: none;
+  }
+}
