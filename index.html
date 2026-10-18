@@ -22,15 +22,22 @@
   </div>
 </footer>
 <script>
-  document.addEventListener("keydown", function (e) {
-    const key = e.key.toLowerCase();
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
 
-    const blocked =
+  document.addEventListener("keydown", function (e) {
+    const key = (e.key || "").toLowerCase();
+
+    const inspectShortcut =
       key === "f12" ||
       (e.ctrlKey && e.shiftKey && ["i", "j", "c"].includes(key)) ||
       (e.metaKey && e.altKey && ["i", "j", "c"].includes(key));
 
-    if (blocked) {
+    const viewSource =
+      (e.ctrlKey || e.metaKey) && key === "u";
+
+    if (inspectShortcut || viewSource) {
       e.preventDefault();
     }
   }, true);
