@@ -274,3 +274,12 @@ body{background:var(--bg);color:var(--navy)}
 body:has(#app .initial) .yuuz-footer {
   display: none;
 }
+/* Footer disembunyikan secara default */
+.yuuz-footer {
+  display: none;
+}
+
+/* Footer hanya muncul di beranda */
+body:has(#page.home-page) .yuuz-footer {
+  display: block;
+}
